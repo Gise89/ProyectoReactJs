@@ -1,12 +1,6 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
-import {Link, useNavigate} from "react-router-dom"
-
-
-const ItemDetail = ({id, name, category, description, price, stock}) => {
-    
-    const navigate =useNavigate()
-    
+const ItemDetail = ({id, name, category, description, price, stock,img}) => {
     return(
         <article className="CardItem">
             <header className="Header">
