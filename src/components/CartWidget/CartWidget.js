@@ -1,11 +1,14 @@
 import cart from './assets/logo.jpg'
 
 const CartWidget = () => {
+    const { totalQuantity } = useContext(CartContext)
+    
     return(
-        <div>
-            <img src={cart} alt="cart-widget" style={{width:'10rem'}}/>
-            🛒0
-        </div>
-    )
-}
+        <Link to='/cart' className='CartWidget' style={{ display: totalQuantity > 0 ? 'block' : 'none'}}>
+            <img className='CartImg' src={cart} alt='cart-wdiget'/>
+            {totalQuantity}    
+        </Link>
+    )    
+}        
+
 export default CartWidget
